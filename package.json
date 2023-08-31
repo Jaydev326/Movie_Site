@@ -1,5 +1,6 @@
 {
   "name": "movie_react",
+  "homepage": "https://jaydev326.github.io/Movie_Site/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
