@@ -5,6 +5,9 @@ import SearchIcon from "./search.svg";
 import "./App.css";
 
 const API_URL = 'http://www.omdbapi.com/?i=tt3896198&apikey=f84604d4';
+// const API_KEY = 'api_key=f01894d2a38347d37b108f2129603b59';
+// const BASE_URL='https://api.themoviedb.org/3';
+// const API_URL =BASE_URL+'/discover/movie?sort_by=popularity.desc&'+API_KEY;
 
 // const movie1={
 //     "Title": "Batman Begins",
@@ -38,14 +41,14 @@ const App = () => {
         value={searchTerm}
         onChange={(e)=>{setSearchTerm(e.target.value)}}
         />
-        <img src={SearchIcon} alt="search" 
+        <img src={SearchIcon} alt="SearchIcon" 
         onClick={(e)=>searchMovies(searchTerm)}/>
       </div>
       
-      {
+      { //trinary operator to check if movies>0 rander MovieCard
         movies?.length>0 ? (
           <div className="container">  
-          {movies.map((movie)=>(      //map into 'movie'
+            {movies.map((movie)=>(      //map into 'movie'
             <MovieCard movie1={movie} />
             ))}       
           </div>
